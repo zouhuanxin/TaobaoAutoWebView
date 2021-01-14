@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_group"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="20.0dip"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="使用前请先打开辅助功能开关" />
+
+    <Button
+        android:id="@+id/open_accessibility_setting"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:text="打开辅助功能开关" />
+
+    <Button
+        android:id="@+id/open_window_setting"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:text="打开悬浮权限" />
+
+    <Button
+        android:id="@+id/open_window_util"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:text="打开悬浮工具" />
+
+    <Button
+        android:id="@+id/accessibility_find_and_click"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:text="模拟辅助功能点击View"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/taobao_kjgx_click"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:text="淘宝汇聚广西抢卷脚本" />
+</LinearLayout>
