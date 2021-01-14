@@ -31,13 +31,15 @@ public class TaobaoHjkxActivity extends AppCompatActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                try {
-                    updateText("三秒后执行任务");
-                    Thread.sleep(3000);
-                    updateText("任务开始");
-                    task();
-                } catch (Exception e) {
-                    e.printStackTrace();
+                while (true){
+                    try {
+                        updateText("三秒后执行任务");
+                        Thread.sleep(3000);
+                        updateText("任务开始");
+                        task();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }).start();
@@ -45,19 +47,19 @@ public class TaobaoHjkxActivity extends AppCompatActivity {
 
     private void task() throws InterruptedException {
         //卷1
-        AccessibilityOperator.getInstance().dispatchGestureClick(0,0);
+        AccessibilityOperator.getInstance().dispatchGestureClick(916,953);
         updateText("卷1执行完毕");
         Thread.sleep(200);
         //卷2
-        AccessibilityOperator.getInstance().dispatchGestureClick(0,0);
+        AccessibilityOperator.getInstance().dispatchGestureClick(347,1261);
         updateText("卷2执行完毕");
         Thread.sleep(200);
         //卷3
-        AccessibilityOperator.getInstance().dispatchGestureClick(0,0);
+        AccessibilityOperator.getInstance().dispatchGestureClick(902,1261);
         updateText("卷3执行完毕");
         Thread.sleep(200);
         //刷新
-        AccessibilityOperator.getInstance().dispatchGestureClick(0,0);
+        AccessibilityOperator.getInstance().dispatchGestureClick(753,177);
         updateText("刷新完毕\n");
         Thread.sleep(2500);
     }
