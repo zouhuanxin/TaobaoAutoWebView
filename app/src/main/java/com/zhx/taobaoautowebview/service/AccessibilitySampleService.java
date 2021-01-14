@@ -4,6 +4,9 @@ import android.accessibilityservice.AccessibilityService;
 import android.annotation.TargetApi;
 import android.view.accessibility.AccessibilityEvent;
 
+import com.zhx.taobaoautowebview.util.accessutil.AccessibilityLog;
+import com.zhx.taobaoautowebview.util.accessutil.AccessibilityOperator;
+
 @TargetApi(16)
 public class AccessibilitySampleService extends AccessibilityService {
 
@@ -28,11 +31,11 @@ public class AccessibilitySampleService extends AccessibilityService {
         // 获取包名
         String pkgName = event.getPackageName().toString();
         int eventType = event.getEventType();
-        //AccessibilityOperator.getInstance().updateEvent(this, event);
+        AccessibilityOperator.getInstance().updateEvent(this, event);
 //        try {
 //            Thread.sleep(200);
 //        } catch (Exception e) {}
-        //AccessibilityLog.printLog("eventType: " + eventType + " pkgName: " + pkgName);
+        AccessibilityLog.printLog("eventType: " + eventType + " pkgName: " + pkgName);
         switch (eventType) {
             case AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED:
                 break;

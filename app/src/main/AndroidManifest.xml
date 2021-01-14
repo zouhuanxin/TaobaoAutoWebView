@@ -17,6 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TaobaoAutoWebView">
+        <activity android:name=".activity.taobao.TaobaoHjkxActivity"></activity>
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,9 +25,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".util.accessutil.AccessibilityOpenHelperActivity" />
+        <activity android:name=".activity.access.AccessibilityNormalSample" />
 
         <service
-            android:name="com.zhx.taobaoautowebview.service.AccessibilitySampleService"
+            android:name=".service.AccessibilitySampleService"
             android:exported="true"
             android:label="@string/app_name"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
